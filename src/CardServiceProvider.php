@@ -1,6 +1,6 @@
 <?php
 
-namespace Razorsheep\ProgressBar;
+namespace Razorsheep;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;

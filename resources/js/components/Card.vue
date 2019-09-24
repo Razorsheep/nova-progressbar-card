@@ -3,10 +3,7 @@
     <div class="px-3 py-3">
       <h1 class="text-center text-3xl text-80 font-light">{{this.options.title}}</h1>
       <div ref="chartContainer"></div>
-      <!--<div id="container" style="margin: 20px; width: 200px; height: 70px;"></div>-->
-      <!--<div id="container" class="m-2 w-32 h-16"></div>-->
     </div>
-    <!--<button class="bg-white hover:bg-gray-100 text-80 font-semibold py-2 px-4 border border-gray-400 rounded shadow">Button</button>-->
   </card>
 </template>
 
@@ -103,7 +100,7 @@ export default {
       // bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
       // bar.text.style.fontSize = '2rem';
 
-      bar.animate(1.0);
+      bar.animate(this.options.percentage);
     }
   }
 };
