@@ -13,13 +13,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Razorsheep\\": "src/"
+            "Razorsheep\\Nova\\Cards\\ProgressBar\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Razorsheep\\CardServiceProvider"
+                "Razorsheep\\Nova\\Cards\\ProgressBar\\CardServiceProvider"
             ]
         }
     }

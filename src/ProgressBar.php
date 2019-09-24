@@ -1,6 +1,6 @@
 <?php
 
-namespace Razorsheep;
+namespace Razorsheep\Nova\Cards\ProgressBar;
 
 use Laravel\Nova\Card;
 
