@@ -13,19 +13,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Razorsheep\\ProgressBar\\": "src/"
+            "Razorsheep\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Razorsheep\\ProgressBar\\CardServiceProvider"
+                "Razorsheep\\CardServiceProvider"
             ]
         }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
