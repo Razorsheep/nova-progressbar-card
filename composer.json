@@ -1,9 +1,11 @@
 {
     "name": "razorsheep/progress-bar",
-    "description": "A Laravel Nova card.",
+    "description": "A Laravel Nova card with a progress bar",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "card",
+        "progressbar"
     ],
     "license": "MIT",
     "require": {
