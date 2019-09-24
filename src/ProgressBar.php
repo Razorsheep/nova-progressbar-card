@@ -24,26 +24,6 @@ class ProgressBar extends Card
     }
 
     /**
-     * Indicates that the progress chart should be a semicircle
-     *
-     * @return $this
-     */
-    public function type(string $type)
-    {
-        return $this->withMeta(['type' => $type]);
-    }
-
-    /**
-     * percentage value sent along..
-     *
-     * @return $this
-     */
-    public function percentage(int $percentage)
-    {
-        return $this->withMeta(['percentage' => $percentage]);
-    }
-
-    /**
      * options to send along
      *
      * @return $this
