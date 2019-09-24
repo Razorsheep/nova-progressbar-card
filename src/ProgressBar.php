@@ -1,6 +1,6 @@
 <?php
 
-namespace Signifly\ProgressBar;
+namespace Razorsheep\ProgressBar;
 
 use Laravel\Nova\Card;
 

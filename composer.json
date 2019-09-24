@@ -1,5 +1,5 @@
 {
-    "name": "signifly/progress-bar",
+    "name": "razorsheep/progress-bar",
     "description": "A Laravel Nova card.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Signifly\\ProgressBar\\": "src/"
+            "Razorsheep\\ProgressBar\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Signifly\\ProgressBar\\CardServiceProvider"
+                "Razorsheep\\ProgressBar\\CardServiceProvider"
             ]
         }
     },
