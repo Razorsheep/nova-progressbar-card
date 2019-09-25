@@ -80,7 +80,11 @@ export default {
         trailWidth: 1,
         easing: "easeInOut",
         duration: 1400,
-        svgStyle: null,
+        svgStyle: {
+          display: "block",
+          height: "70px",
+          paddingLeft: "50px"
+        },
         text: {
           value: "",
           alignToBottom: true
@@ -92,7 +96,6 @@ export default {
             bar.path.setAttribute("stroke", state.color);
             bar.text.style.color = state.color;
           }
-
           var value = Math.round(bar.value() * 100);
           if (value === 0) {
             bar.setText("");

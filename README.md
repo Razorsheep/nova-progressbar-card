@@ -1,7 +1,109 @@
 ## Nova ProgressBar Card
 This package allows you to add progressbar cards to your resources and dashboards in [Nova](https://nova.laravel.com).
+https://packagist.org/packages/razorsheep/nova-progressbar-card
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/razorsheep/nova-progressbar-card.svg?style=flat-square)](https://packagist.org/packages/razorsheep/nova-progressbar-card)
+[![Total Downloads](https://img.shields.io/packagist/dt/razorsheep/nova-progressbar-card.svg?style=flat-square)](https://packagist.org/packages/razorsheep/nova-progressbar-card)
+
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Basic Usage](#basic-usage)
+* [Advanced Options](#advanced-options)
+
 ___
-### Installation
+## Requirements
+* [Laravel v5.8.*](https://laravel.com/docs/5.8)
+* [Laravel Nova v2.*](https://nova.laravel.com/docs/2.0/)
+
+___
+## Installation
+Just run:  
 ```bash
 composer require razorsheep/nova-progressbar-card
 ```
+After this the setup will be complete and you can use the components listed here.
+
+___
+## Basic Usage
+```php
+// in App\Nova\Product
+...
+use Razorsheep\Nova\Cards\ProgressBar\ProgressBar;
+...
+
+/**
+ * Get the cards available for the request.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @return array
+ */
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options(['title' => 'Translations', 'percentage' => 0.5]);
+    ];
+}
+
+```
+
+___ 
+## Advanced Options
+
+### Custom color
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'color' => '#123456',
+        ]);
+    ];
+}
+```
+
+### Animate Bar Color A -> B
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'colorFrom' => '#aaa',
+            'colorTo' => '#bbb',
+            'animateColor' => true,
+        ]);
+    ];
+}
+```
+
+### Stroke Width
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'strokeWidth' => 8,
+        ]);
+    ];
+}
+```
+
+### Semi Circle Type Progress Bar
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'type' => 'semi-circle',
+        ]);
+    ];
+}
+```
+
+Feel free to come with suggestions for improvements.
