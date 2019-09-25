@@ -40,7 +40,7 @@ export default {
     }
   },
   methods: {
-    drawLine(options) {
+    drawLine() {
       var bar = new ProgressBar.Line(this.$refs.chartContainer, {
         strokeWidth: this.options.strokeWidth,
         easing: "easeInOut",
@@ -72,7 +72,7 @@ export default {
 
       bar.animate(this.options.percentage);
     },
-    drawSemiCircle(options) {
+    drawSemiCircle() {
       var bar = new ProgressBar.SemiCircle(this.$refs.chartContainer, {
         strokeWidth: this.options.strokeWidth,
         color: this.options.color,
@@ -83,7 +83,8 @@ export default {
         svgStyle: {
           display: "block",
           height: "70px",
-          paddingLeft: "50px"
+          marginLeft: "auto",
+          marginRight: "auto"
         },
         text: {
           value: "",
