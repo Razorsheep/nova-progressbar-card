@@ -1,8 +1,11 @@
 ## Nova ProgressBar Card
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/razorsheep/nova-progressbar-card.svg?style=flat-square)](https://packagist.org/packages/razorsheep/nova-progressbar-card)
 [![Total Downloads](https://img.shields.io/packagist/dt/razorsheep/nova-progressbar-card.svg?style=flat-square)](https://packagist.org/packages/razorsheep/nova-progressbar-card)
+[![License](https://poser.pugx.org/razorsheep/nova-progressbar-card/license)](https://packagist.org/packages/razorsheep/nova-progressbar-card)
 
 This package allows you to add progressbar cards to your resources and dashboards in [Nova](https://nova.laravel.com).
+
+<img src="https://github.com/razorsheep/nova-progressbar-card/blob/master/screenshot.png" alt="Example">
 
 #### DISCLAIMER: 
 This package is still work in progress. Feel free to help improve it.
