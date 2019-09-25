@@ -65,7 +65,15 @@ export default {
         from: { color: this.options.fromColor },
         to: { color: this.options.toColor },
         step: (state, bar) => {
-          bar.setText(Math.round(bar.value() * 100) + " %");
+          bar.path.setAttribute("stroke", state.color);
+          var value = Math.round(bar.value() * 100);
+          if (value === 0) {
+            bar.setText("");
+          } else {
+            bar.setText(value + " %");
+          }
+          bar.text.style.color = state.color;
+          //   bar.setText(Math.round(bar.value() * 100) + " %");
         }
       });
 
