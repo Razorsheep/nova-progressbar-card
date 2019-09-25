@@ -62,8 +62,8 @@ export default {
           },
           autoStyleContainer: false
         },
-        // from: {color: '#FFEA82'},
-        // to: {color: '#ED6A5A'},
+        from: { color: this.options.fromColor },
+        to: { color: this.options.toColor },
         step: (state, bar) => {
           bar.setText(Math.round(bar.value() * 100) + " %");
         }
@@ -84,8 +84,8 @@ export default {
           value: "",
           alignToBottom: true
         },
-        from: { color: "#FFEA82" },
-        to: { color: "#ED6A5A" },
+        from: { color: this.options.fromColor },
+        to: { color: this.options.toColor },
         step: (state, bar) => {
           bar.path.setAttribute("stroke", state.color);
           var value = Math.round(bar.value() * 100);
