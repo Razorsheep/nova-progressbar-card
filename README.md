@@ -4,6 +4,10 @@
 
 This package allows you to add progressbar cards to your resources and dashboards in [Nova](https://nova.laravel.com).
 
+#### DISCLAIMER: 
+This package is still work in progress. Feel free to help improve it.
+
+
 * [Requirements](#requirements)
 * [Installation](#installation)
 * [Basic Usage](#basic-usage)
