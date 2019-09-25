@@ -2,7 +2,7 @@
   <card class="flex flex-col items-center justify-center">
     <div class="px-3 py-3">
       <h1 class="text-center text-3xl text-80 font-light">{{this.options.title}}</h1>
-      <div ref="chartContainer" style="height: 70px;"></div>
+      <div ref="chartContainer"></div>
     </div>
   </card>
 </template>
