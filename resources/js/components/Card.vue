@@ -2,7 +2,7 @@
   <card class="flex flex-col items-center justify-center">
     <div class="px-3 py-3">
       <h1 class="text-center text-3xl text-80 font-light">{{this.options.title}}</h1>
-      <div ref="chartContainer"></div>
+      <div ref="chartContainer" style="height: 70px;"></div>
     </div>
   </card>
 </template>
@@ -54,8 +54,6 @@ export default {
             color: "#999",
             textAlign: "center",
             position: "relative",
-            right: "0",
-            top: "0",
             padding: 0,
             margin: 0,
             transform: null
@@ -65,15 +63,10 @@ export default {
         from: { color: this.options.fromColor },
         to: { color: this.options.toColor },
         step: (state, bar) => {
-          bar.path.setAttribute("stroke", state.color);
-          var value = Math.round(bar.value() * 100);
-          if (value === 0) {
-            bar.setText("");
-          } else {
-            bar.setText(value + " %");
+          bar.setText(Math.round(bar.value() * 100) + " %");
+          if (this.options.animateColor) {
+            bar.path.setAttribute("stroke", state.color);
           }
-          bar.text.style.color = state.color;
-          //   bar.setText(Math.round(bar.value() * 100) + " %");
         }
       });
 
@@ -95,14 +88,17 @@ export default {
         from: { color: this.options.fromColor },
         to: { color: this.options.toColor },
         step: (state, bar) => {
-          bar.path.setAttribute("stroke", state.color);
+          if (this.options.animateColor) {
+            bar.path.setAttribute("stroke", state.color);
+            bar.text.style.color = state.color;
+          }
+
           var value = Math.round(bar.value() * 100);
           if (value === 0) {
             bar.setText("");
           } else {
             bar.setText(value + " %");
           }
-          bar.text.style.color = state.color;
         }
       });
       // bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
