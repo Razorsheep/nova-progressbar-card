@@ -8,6 +8,11 @@
         "progressbar"
     ],
     "license": "MIT",
+    "authors": [{
+        "name": "Ro Kleine Sonne",
+        "email": "ro@signifly.com",
+        "role": "Developer"
+    }],
     "require": {
         "php": ">=7.1.0"
     },
